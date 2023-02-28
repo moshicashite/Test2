@@ -1,0 +1,484 @@
+@charset "utf-8";
+
+@import "foundation/_setting.scss";
+//==========================================================================
+//allergy.scss
+//==========================================================================
+.l-nav__subMenuSP .subMenuSP {
+    display: none;
+}
+.l-main {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 54.5px;
+        right: 50%;
+        transform: translateX(50%);
+        min-width: 1618px;
+        width: 100%;
+        height: calc(100% - 54.5px);
+        background: #F2EBE2 url("../images/common/bg02.webp") 50% -300px repeat-y;
+        background-size: 100% auto;
+        @include smMax {
+            min-width: 100%;
+            background: #F2EBE2 url("../images/common/bg02_sp.webp") 50% sm_vw(-960) repeat-y;
+            background-size: 100% auto;
+        }
+    }
+}
+
+.index {
+    &__box {
+        padding-top: 30px;
+        @include smMax {
+            padding-top: sm_vw(60);
+        }
+    }
+    .index__box + .index__box {
+        padding-top: 56px;
+        @include smMax {
+            padding-top: sm_vw(102);
+        }
+    }
+    &__txt01 {
+        margin-top: 16px;
+        @include smMax {
+            margin-top: sm_vw(32);
+        }
+    }
+    &__list01 {
+        margin-top: 26px;
+        @include smMax {
+            margin-top: sm_vw(52);
+        }
+        dt {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: $colorBrown;
+            @include smMax {
+                font-size: sm_vw(32);
+            }
+            + dd {
+                margin-top: 9px;
+                @include smMax {
+                    margin-top: sm_vw(18);
+                }
+            }
+        }
+        dd {
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 1.85;
+            @include smMax {
+                font-size: sm_vw(26);
+            }
+            + dt {
+                margin-top: 16px;
+                @include smMax {
+                    margin-top: sm_vw(32);
+                }
+            }
+            .c-list-caution {
+                margin-top: 5px;
+                @include smMax {
+                    margin-top: sm_vw(10);
+                }
+            }
+        }
+    }
+    &__list02 {
+        margin-top: 26px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        @include smMax {
+            margin-top: sm_vw(26);
+            gap: sm_vw(40) 0;
+        }
+        li {
+            width: 330px;
+            @include smMax {
+                width: 100%;
+            }
+        }
+    }
+    &__list03 {
+        margin-top: 26px;
+        @include smMax {
+            margin-top: sm_vw(52);
+        }
+    }
+    &__card01 {
+        margin-top: 18px;
+        @include smMax {
+            margin-top: sm_vw(36);
+        }
+    }
+    &__btn01 {
+        margin: 26px auto 0;
+        width: 330px;
+        @include smMax {
+            margin: sm_vw(52) auto 0;
+            width: sm_vw(660);
+        }
+    }
+    .index__txt01 + .index__txt01 {
+        margin-top: 22px;
+        @include smMax {
+            margin-top: sm_vw(44);
+        }
+    }
+    .index__txt01 + .index__list03 {
+        margin-top: 4px;
+        @include smMax {
+            margin-top: sm_vw(8);
+        }
+    }
+}
+
+.newsmail {
+    &__box {
+        padding-top: 50px;
+        @include smMax {
+            padding-top: sm_vw(100);
+        }
+    }
+    .newsmail__box + .newsmail__box {
+        padding-top: 56px;
+        @include smMax {
+            padding-top: sm_vw(102);
+        }
+    }
+    &__innerBox01 {
+        margin-top: 22px;
+        @include smMax {
+            margin-top: sm_vw(44);
+        }
+    }
+    .newsmail__innerBox01 + .newsmail__innerBox01 {
+        margin-top: 60px;
+        @include smMax {
+            margin-top: sm_vw(72);
+        }
+    }
+    &__txt01 {
+        margin-top: 16px;
+        @include smMax {
+            margin-top: sm_vw(32);
+        }
+    }
+    &__image01 {
+        margin: 0 170px;
+        @include smMax {
+            margin: 0;
+        }
+    }
+    &__image02 {
+        margin: 16px 335px 0;
+        @include smMax {
+            margin: sm_vw(32) 0 0;
+        }
+    }
+    &__list02 {
+        margin-top: 26px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        @include smMax {
+            margin-top: sm_vw(52);
+            gap: sm_vw(40) 0;
+        }
+        li {
+            width: 330px;
+            @include smMax {
+                width: 100%;
+            }
+        }
+    }
+    &__list03 {
+        margin-top: 26px;
+        @include smMax {
+            margin-top: sm_vw(52);
+        }
+    }
+    &__card01 {
+        margin-top: 18px;
+        @include smMax {
+            margin-top: sm_vw(36);
+        }
+    }
+    &__btn01 {
+        margin: 26px auto 0;
+        width: 330px;
+        @include smMax {
+            margin: sm_vw(52) auto 0;
+            width: sm_vw(660);
+        }
+    }
+    .newsmail__txt01 + .newsmail__txt01 {
+        margin-top: 22px;
+        @include smMax {
+            margin-top: sm_vw(44);
+        }
+    }
+    .newsmail__txt01 + .newsmail__list03 {
+        margin-top: 4px;
+        @include smMax {
+            margin-top: sm_vw(8);
+        }
+    }
+    .newsmail__ttl02 + .newsmail__txt01 {
+        margin-top: 10px;
+        @include smMax {
+            margin-top: sm_vw(20);
+        }
+    }
+}
+
+.endlessromance {
+    &__box {
+        padding-top: 50px;
+        @include smMax {
+            padding-top: sm_vw(100);
+        }
+    }
+    .endlessromance__box + .endlessromance__box {
+        padding-top: 56px;
+        @include smMax {
+            padding-top: sm_vw(102);
+        }
+    }
+    &__box02 {
+        padding-top: 50px;
+        @include smMax {
+            padding-top: sm_vw(60);
+        }
+    }
+    .endlessromance__box02 + .endlessromance__box02 {
+        padding: 0 0 50px;
+        @include smMax {
+            padding: 0 0 sm_vw(100);
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+    &__innerBox01 {
+        margin-top: 22px;
+        @include smMax {
+            margin-top: sm_vw(44);
+        }
+    }
+    .endlessromance__innerBox01 + .endlessromance__innerBox01 {
+        margin-top: 60px;
+        @include smMax {
+            margin-top: sm_vw(120);
+        }
+    }
+    &__page-nav {
+        margin-top: 60px;
+        @include smMax {
+            margin-top: sm_vw(120);
+            ul li a {
+                padding-bottom: sm_vw(58);
+            }
+        }
+    }
+    &__ttl02 {
+        margin-bottom: 14px;
+        @include smMax {
+            margin-bottom: sm_vw(28);
+        }
+    }
+
+    &__txt01 {
+        margin-top: 16px;
+        @include smMax {
+            margin-top: sm_vw(32);
+        }
+    }
+    &__image01 {
+        @include smMin {
+            display: flex;
+            gap: 17.5px;
+            flex-wrap: wrap;
+            justify-content: center;
+            > li {
+                width: calc(50% - 8.75px);
+            }
+        }
+        @include smMax {
+            display: flex;
+            flex-wrap: wrap;
+            > li + li {
+                margin-top: sm_vw(20);
+            }
+            &.reverse {
+                flex-direction: column-reverse;
+                > li + li {
+                    margin-top: 0;
+                    margin-bottom: sm_vw(30);
+                }
+            }
+        }
+        .caption {
+            margin-top: 8px;
+            display: block;
+            font-size: 1rem;
+            @include smMax {
+                margin-top: sm_vw(16);
+                font-size: sm_vw(20);
+            }
+        }
+    }
+    &__image02 {
+        margin: 20px 170px 0;
+        @include smMax {
+            margin: sm_vw(40) 0 0;
+        }
+    }
+    &__list02 {
+        margin-top: 26px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        @include smMax {
+            margin-top: sm_vw(52);
+            gap: sm_vw(40) 0;
+        }
+        li {
+            width: 330px;
+            @include smMax {
+                width: 100%;
+            }
+        }
+    }
+    &__list03 {
+        margin-top: 26px;
+        @include smMax {
+            margin-top: sm_vw(52);
+        }
+    }
+    &__card01 {
+        margin-top: 18px;
+        @include smMax {
+            margin-top: sm_vw(36);
+        }
+    }
+    &__btn01 {
+        margin: 26px auto 0;
+        width: 330px;
+        @include smMax {
+            margin: sm_vw(52) auto 0;
+            width: sm_vw(660);
+        }
+    }
+    .endlessromance__txt01 + .endlessromance__txt01 {
+        margin-top: 22px;
+        @include smMax {
+            margin-top: sm_vw(44);
+        }
+    }
+    .endlessromance__txt01 + .endlessromance__image01 {
+        margin-top: 16px;
+        @include smMax {
+            margin-top: sm_vw(32);
+        }
+    }
+    .endlessromance__txt01 + .endlessromance__list03 {
+        margin-top: 4px;
+        @include smMax {
+            margin-top: sm_vw(8);
+        }
+    }
+    .endlessromance__txt02 + .endlessromance__list03 {
+        margin-top: 0;
+        @include smMax {
+            margin-top: 0;
+        }
+    }
+    .endlessromance__ttl02 + .endlessromance__txt01 {
+        margin-top: 10px;
+        @include smMax {
+            margin-top: sm_vw(20);
+        }
+    }
+
+    .box-border {
+        border-top: 0.5px solid $colorBrown02;
+    }
+    .box-border_b {
+        padding-bottom: 50px;
+        border-bottom: 1px solid $colorBrown02;
+        @include smMax {
+            padding-bottom: sm_vw(100);
+        }
+    }
+    .btnAC {
+        position: relative;
+        padding-top: 14px;
+        cursor: pointer;
+        @include smMax {
+            padding-top: sm_vw(28);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            right: 10px;
+            bottom: 50%;
+            transform: translateY(50%);
+            width: 15px;
+            height: 0.5px;
+            background-color: $colorBrown02;
+            @include smMax {
+                right: sm_vw(20);
+                width: sm_vw(30);
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            right: 10px;
+            bottom: 50%;
+            transform: translateY(50%) rotate(90deg);
+            width: 15px;
+            height: 0.5px;
+            background-color: $colorBrown02;
+            @include smMax {
+                right: sm_vw(20);
+                width: sm_vw(30);
+            }
+        }
+        &.is-active {
+            &::after {
+                display: none;
+            }
+        }
+        @include smMax {
+            padding-top: sm_vw(20);
+        }
+    }
+    .acBox {
+        display: none;
+        &__inner {
+            padding-top: 25px;
+        }
+        .acBox__inner + .acBox__inner {
+            padding-top: 35px;
+            @include smMax {
+                padding-top: sm_vw(70);
+            }
+        }
+        .acBox__inner + .acBox__inner02 {
+            padding-top: 0;
+            margin-top: 40px;
+            @include smMax {
+                margin-top: sm_vw(80);
+            }
+        }
+    }
+}

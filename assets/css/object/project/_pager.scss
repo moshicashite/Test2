@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+//==========================================================================
+//_pager.scss
+//==========================================================================
+.p-pager {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 6.75px;
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $colorPlain;
+        background-color: #fff;
+        @include hover {
+            opacity: 0.7;
+        }
+        @include smMax {
+            margin: 0 sm_vw(11.5);
+            width: sm_vw(64);
+            height: sm_vw(64);
+            font-size: sm_vw(24);
+        }
+    }
+    .current {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 6.75px;
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #fff;
+        background-color: $colorBrown02;
+        @include smMax {
+            margin: 0 sm_vw(11.5);
+            width: sm_vw(64);
+            height: sm_vw(64);
+            font-size: sm_vw(24);
+        }
+    }
+    .dotted {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $colorPlain;
+        padding-bottom: 8px;
+        @include smMax {
+            margin: 0;
+            width: sm_vw(64);
+            height: sm_vw(64);
+            font-size: sm_vw(24);
+            padding-bottom: sm_vw(8);
+        }
+    }
+    .btnPrev {
+        position: relative;
+        margin: 0 6.75px 0 0;
+        width: 62px;
+        padding-left: 26px;
+        background-color: transparent;
+        @include smMax {
+            margin: 0 sm_vw(11.5) 0 0;
+            width: sm_vw(124);
+            padding-left: sm_vw(52);
+        }
+        .c-ico {
+            position: absolute;
+            left: 0;
+            bottom: calc(50% + 1px);
+            transform: translateY(50%);
+            width: 20px;
+            @include transition;
+            @include smMax {
+                width: sm_vw(40);
+            }
+        }
+        @include hover {
+            opacity: 0.7;
+            .c-ico {
+                transform: translate(-5px,50%);
+            }
+        }
+    }
+    .btnNext {
+        position: relative;
+        margin: 0 0 0 6.75px;
+        width: 62px;
+        padding-right: 26px;
+        background-color: transparent;
+        @include smMax {
+            margin: 0 0 0 sm_vw(11.5);
+            width: sm_vw(124);
+            padding-right: sm_vw(52);
+        }
+        .c-ico {
+            position: absolute;
+            right: 0;
+            bottom: calc(50% + 1px);
+            transform: translateY(50%);
+            width: 20px;
+            @include transition;
+            @include smMax {
+                width: sm_vw(40);
+            }
+        }
+        @include hover {
+            opacity: 0.7;
+            .c-ico {
+                transform: translate(5px,50%);
+            }
+        }
+    }
+}

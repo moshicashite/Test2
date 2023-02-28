@@ -1,0 +1,440 @@
+@charset "utf-8";
+
+//==========================================================================
+//_l-footer.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.l-footer
+//-----------------------------------------------------------------
+.l-footer {
+    position: relative;
+    background-color: $colorBrown;
+    padding: 50px 0 0;
+    z-index: 10;
+    @include smMax {
+        padding: sm_vw(100) 0 0;
+    }
+    &__bnr {
+        margin: 0 auto;
+        width: 480px;
+        display: none;
+        @include smMax {
+            width: 100%;
+        }
+        a {
+            position: relative;
+            display: block;
+            color: #fff;
+            line-height: 1.2;
+            .txtBox {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .en {
+                    font-size: 3.4rem;
+                    font-family: $font-en;
+                    font-weight: 400;
+                    @include smMax {
+                        font-size: sm_vw(68);
+                    }
+                }
+                .jpn {
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    @include smMax {
+                        font-size: sm_vw(26);
+                    }
+                }
+                .more {
+                    position: absolute;
+                    display: inline-block;
+                    right: 50%;
+                    bottom: 20px;
+                    transform: translateX(50%);
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    padding-right: 48px;
+                    line-height: 1;
+                    @include smMax {
+                        bottom: sm_vw(40);
+                        font-size: sm_vw(24);
+                        padding-right: sm_vw(96);
+                    }
+                    .c-ico-arrow {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0.4em;
+                        @include transition;
+                    }
+                    &.en01 {
+                        font-family: $font-en;
+                    }
+                }
+            }
+            @include hover {
+                opacity: 0.7;
+                .more {
+                    .c-ico {
+                        transform: translateX(10px);
+                    }
+                }
+            }
+        }
+    }
+    &__menu01 {
+        margin-top: 50px;
+        //display: flex;
+        display: none;
+        flex-wrap: wrap;
+        @include smMax {
+            margin-top: sm_vw(100);
+        }
+        li {
+            width: calc(50% - 20px);
+            height: 80px;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #fff;
+            line-height: 1.5;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            @include smMin {
+                &:nth-child(n+3) {
+                    border-top: 0;
+                }
+                &:nth-child(2n) {
+                    margin-left: 40px;
+                }
+            }
+            @include smMax {
+                width: 100%;
+                font-size: sm_vw(32);
+                height: sm_vw(166);
+                border-bottom: none;
+                &:last-child {
+                    border-bottom: 1px solid #fff;
+                }
+            }
+            a {
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                color: #fff;
+                padding: 0 15px;
+                @include smMax {
+                    padding: 0 sm_vw(20) 0 sm_vw(30);
+                }
+                .more {
+                    position: absolute;
+                    right: 15px;
+                    bottom: 50%;
+                    transform: translateY(50%);
+                    display: inline-block;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    padding-right: 48px;
+                    line-height: 1;
+                    @include smMax {
+                        right: sm_vw(20);
+                        padding-right: sm_vw(96);
+                        font-size: sm_vw(24);
+                    }
+                    .c-ico-arrow {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0.4em;
+                        @include transition;
+                    }
+                    &.en01 {
+                        font-family: $font-en;
+                    }
+                }
+                @include hover {
+                    opacity: 0.7;
+                    .more {
+                        .c-ico {
+                            transform: translateX(10px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__menu02 {
+        margin-top: 20px;
+        //display: flex;
+        flex-wrap: wrap;
+        display: none;
+        @include smMax {
+            margin-top: sm_vw(95);
+        }
+        li {
+            width: calc(50% - 20px);
+            height: 80px;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #fff;
+            line-height: 1.5;
+            border-bottom: 1px solid #fff;
+            @include smMin {
+                &:nth-child(2n) {
+                    margin-left: 40px;
+                }
+            }
+            @include smMax {
+                width: calc(50% - 2.666666666666667vw);
+                font-size: sm_vw(28);
+                height: sm_vw(195);
+                &:nth-child(2n) {
+                    margin-left: sm_vw(40);
+                }
+            }
+            a {
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                color: #fff;
+                padding: 0 15px;
+                @include smMax {
+                    padding: 0;
+                    justify-content: center;
+                }
+                .txt {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    @include smMax {
+                        height: 100%;
+                        justify-content: center;
+                        text-align: center;
+                    }
+                    .c-ico {
+                        display: block;
+                        margin-right: 10px;
+                        @include smMax {
+                            position: absolute;
+                            top: 0;
+                            right: 50%;
+                            transform: translateX(50%);
+                            margin-right: 0;
+                        }
+                    }
+                }
+                .more {
+                    position: absolute;
+                    display: inline-block;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    padding-right: 48px;
+                    line-height: 1;
+                    @include smMin {
+                        right: 15px;
+                        bottom: 50%;
+                        transform: translateY(50%);
+                    }
+                    @include smMax {
+                        font-size: sm_vw(24);
+                        right: 50%;
+                        bottom: sm_vw(20);
+                        transform: translateX(50%);
+                        white-space: nowrap;
+                    }
+                    .c-ico-arrow {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0.4em;
+                        @include transition;
+                    }
+                    &.en01 {
+                        font-family: $font-en;
+                    }
+                }
+                @include hover {
+                    opacity: 0.7;
+                    .more {
+                        .c-ico {
+                            transform: translateX(10px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__contact {
+        padding: 35px 0 50px;
+        background-color: #BFA28C;
+        @include smMax {
+            padding: sm_vw(70) 0 sm_vw(90);
+        }
+        dt {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #fff;
+            text-align: center;
+            @include smMax {
+                margin-bottom: sm_vw(40);
+                font-size: sm_vw(36);
+            }
+        }
+        dd {
+            display: flex;
+            @include smMin {
+                justify-content: center;
+            }
+            @include smMax {
+                flex-direction: column;
+                gap: sm_vw(50) 0;
+            }
+        }
+
+        &__box {
+            margin: 0 20px;
+            @include smMax {
+                margin: 0 sm_vw(45);
+            }
+            .ttl {
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: #fff;
+                line-height: 1.5;
+                text-align: center;
+                @include smMax {
+                    font-size: sm_vw(32);
+                }
+            }
+            .txt {
+                margin-top: 4px;
+                font-size: 1.1rem;
+                font-weight: 400;
+                color: #fff;
+                line-height: 1.4;
+                text-align: center;
+                @include smMax {
+                    font-size: sm_vw(22);
+                }
+            }
+            .tel {
+                margin-top: 6px;
+                font-size: 1.8rem;
+                font-weight: 600;
+                color: #fff;
+                line-height: 1.4;
+                text-align: center;
+                @include smMax {
+                    font-size: sm_vw(36);
+                }
+                a {
+                    padding-bottom: 6px;
+                    color: #fff;
+                    border-bottom: 0.5px solid #fff;
+                    @include smMax {
+                        padding-bottom: sm_vw(8);
+                    }
+                }
+                > span {
+                    padding-bottom: 6px;
+                    color: #fff;
+                    border-bottom: 0.5px solid #fff;
+                    @include smMax {
+                        padding-bottom: sm_vw(8);
+                    }
+                }
+            }
+        }
+    }
+    &__sns {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        @include smMax {
+            margin-top: sm_vw(100);
+        }
+        li {
+            margin: 0 7.5px;
+            width: 45px;
+            @include smMax {
+                margin: 0 sm_vw(15);
+                width: sm_vw(90);
+            }
+            &.white {
+                color: #fff;
+            }
+            a {
+                @include hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+    &__list {
+        margin-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 0.5px solid #fff;
+        @include smMax {
+            margin-top: sm_vw(50);
+            padding-bottom: sm_vw(50);
+        }
+        &.c-list-disc {
+            li {
+                font-size: 1.1rem;
+                @include smMax {
+                    font-size: sm_vw(22);
+                    letter-spacing: 0;
+                }
+            }
+        }
+    }
+    &__outer {
+        margin-top: 30px;
+        padding: 25px 0 30px;
+        background-color: #fff;
+        @include smMax {
+            margin-top: sm_vw(80);
+            padding: sm_vw(40) 0 sm_vw(40);
+        }
+    }
+    &__menu03 {
+        display: flex;
+        justify-content: center;
+        @include smMax {
+            display: block;
+            text-align: center;
+        }
+        li {
+            margin: 0 6px;
+            font-size: 1.2rem;
+            @include smMax {
+                font-size: sm_vw(26);
+                display: inline-block;
+                + li {
+                    margin-top: sm_vw(20);
+                }
+            }
+            a {
+                padding-bottom: 5px;
+                color: $colorPlain;
+                border-bottom: 0.5px solid $colorPlain;
+                @include hover {
+                    border-bottom: transparent;
+                }
+            }
+        }
+    }
+    &__copyright {
+        margin-top: 25px;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}

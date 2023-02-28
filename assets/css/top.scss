@@ -1,0 +1,622 @@
+@charset "utf-8";
+
+@import "foundation/_setting.scss";
+//==========================================================================
+//top.scss
+//==========================================================================
+.home {
+    .l-header-top {
+        display: block;
+    }
+    .l-header__outer {
+        display: none;
+    }
+    .l-main {
+        padding: 0;
+        background-color: transparent;
+        &::before {
+            display: none;
+        }
+    }
+    .l-nav__subMenuSP .click-menu__wrap .click-menu {
+        height: 0;
+    }
+    .l-nav__subMenuSP .click-menu__wrap.show .click-menu {
+        height: sm_vw(90);
+    }
+    .l-footer__contact {
+        margin-top: 50px;
+        @include smMax {
+            margin-top: sm_vw(100);
+        }
+    }
+    .l-footer__bnr {
+        display: block;
+    }
+    .l-footer__menu01 {
+        display: flex;
+    }
+    .l-footer__menu02 {
+        display: flex;
+    }
+}
+.top {
+    .mv {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: filter 0.7s,opacity 0.7s;
+        &.scroll {
+            filter: brightness(300%);
+            opacity: 0;
+        }
+    }
+    .news {
+        position: relative;
+        background-color: $colorBrown;
+        padding: 20px 0;
+        z-index: 2;
+        @include smMax {
+            padding: sm_vw(25);
+        }
+        &__outer {
+            position: relative;
+            padding: 35px 0 40px;
+            @include smMax {
+                padding: sm_vw(35) sm_vw(25) sm_vw(70);
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                border-top: 0.5px solid #fff;
+                border-bottom: 0.5px solid #fff;
+                @include smMax {
+                    height: 100%;
+                    border: 0.5px solid #fff;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                border-top: 0.5px solid #fff;
+                border-bottom: 0.5px solid #fff;
+                @include smMax {
+                    width: calc(100% - 4px);
+                    height: calc(100% - 4px);
+                    left: auto;
+                    bottom: 50%;
+                    right: 50%;
+                    transform: translate(50%,50%);
+                    border: 0.5px solid #fff;
+                }
+            }
+        }
+        &__inner {
+            position: relative;
+            margin: 0 auto;
+            padding: 0 75px;
+            max-width: 1200px;
+            @include smMax {
+                padding: 0;
+                z-index: 2;
+            }
+        }
+        &__ttl01 {
+            letter-spacing: 0.06em;
+        }
+        &__slider {
+            &__wrapper {
+                margin-top: 25px;
+                @include smMax {
+                    margin-top: sm_vw(20);
+                }
+            }
+            &__box {
+                width: 20%;
+                padding: 0 10px;
+                @include smMax {
+                    width: 100%;
+                    padding: 0 sm_vw(10);
+                }
+                a {
+                    position: relative;
+                    display: block;
+                    padding-bottom: 16px;
+                    @include smMax {
+                        padding-bottom: sm_vw(40);
+                    }
+                    @include hover {
+                        opacity: 0.7;
+                        .c-ico-arrow {
+                            transform: translateX(10px);
+                        }
+                    }
+                }
+                .thumb {
+                    position: relative;
+                    display: block;
+                    .cat {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 9px;
+                        height: 20px;
+                        font-size: 10px;
+                        font-weight: 700;
+                        font-family: $font-en;
+                        border-radius: 0 0 8px 0;
+                        @include smMax {
+                            padding: 0 sm_vw(25);
+                            font-size: sm_vw(23);
+                            height: sm_vw(50);
+                        }
+                        &.topics {
+                            color: #fff;
+                            background-color: #BFA28C;
+                        }
+                        &.event {
+                            color: #BFA28C;
+                            background-color: #fff;
+                        }
+                    }
+                }
+                .date {
+                    display: block;
+                    margin-top: 10px;
+                    font-size: 9px;
+                    font-weight: 400;
+                    color: #fff;
+                    @include smMax {
+                        margin-top: sm_vw(20);
+                        font-size: sm_vw(20);
+                    }
+                }
+                .ttl {
+                    display: block;
+                    margin-top: 2px;
+                    font-size: 11px;
+                    color: #fff;
+                    @include smMax {
+                        margin-top: sm_vw(5);
+                        font-size: sm_vw(26);
+                    }
+                }
+                .c-tags {
+                    margin-top: 10px;
+                    display: block;
+                    @include smMax {
+                        margin-top: sm_vw(14);
+                    }
+                    .c-tag {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        width: 100%;
+                        height: 15px;
+                        font-size: 10px;
+                        font-weight: 400;
+                        border-radius: 100vh;
+                        letter-spacing: -1px;
+                        @include smMax {
+                            font-size: sm_vw(24);
+                            height: sm_vw(44);
+                        }
+                        &.red {
+                            background-color: #EDD3CC;
+                        }
+                        &.blue {
+                            background-color: #D5E5E3;
+                        }
+                        &.orange {
+                            background-color: #F0D7B4;
+                        }
+                        + .c-tag {
+                            margin-top: 2px;
+                        }
+                        .small {
+                            @include smMin {
+                                display: block;
+                                width: 100%;
+                                flex: 1;
+                                transform: scale(0.8);
+                                letter-spacing: -1px;
+                            }
+                        }
+                    }
+                }
+                .c-ico-arrow {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    @include transition;
+                }
+            }
+            .slick-dots {
+                @include smMax {
+                    margin-top: sm_vw(40);
+                }
+            }
+        }
+        &__btn {
+            position: absolute;
+            top: 5px;
+            right: 50px;
+            width: 215px;
+            @include smMax {
+                position: relative;
+                margin: sm_vw(50) auto 0;
+                right: 0;
+                top: 0;
+                width: sm_vw(448);
+            }
+        }
+        .slick-dots {
+            font-size: 0;
+            text-align: center;
+            li {
+                position: relative;
+                display: inline-block;
+                margin: 0;
+                width: sm_vw(60);
+                height: sm_vw(60);
+                button {
+                    position: relative;
+                    font-size: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: 50%;
+                        right: 50%;
+                        transform: translate(50%,50%);
+                        width: sm_vw(10);
+                        height: sm_vw(10);
+                        display: block;
+                        border-radius: 100vh;
+                        background-color: #fff;
+                    }
+                }
+                &.slick-active {
+                    button {
+                        &::before {
+                            width: sm_vw(20);
+                            height: sm_vw(20);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    .bg01 {
+        position: relative;
+        background-color: #F2EBE2;
+        padding: 110px 0;
+        z-index: 2;
+        @include smMax {
+            position: relative;
+            padding: sm_vw(130) 0;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 50%;
+            transform: translateX(50%);
+            min-width: 1618px;
+            width: 100%;
+            height: 100%;
+            background: transparent url("../images/common/bg01.webp") 50% -300px no-repeat;
+            background-size: 100% auto;
+            @include smMax {
+                min-width: 100%;
+                background: transparent url("../images/common/bg01_sp.webp") 50% sm_vw(-960) no-repeat;
+                background-size: 100% auto;
+            }
+        }
+    }
+    .photo {
+        position: relative;
+        z-index: 3;
+        &__inner {
+            @include smMax {
+                padding: 0;
+            }
+        }
+        &__box {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            height: 560px;
+            @include smMax {
+                height: auto;
+            }
+        }
+        &__img {
+            position: absolute;
+            top: 0;
+            left: 395px;
+            width: 706px;
+            height: 560px;
+            @include smMax {
+                position: relative;
+                left: 0;
+                width: 100%;
+                height: sm_vw(690);
+            }
+            li {
+                position: absolute;
+                width: 232px;
+                &:nth-child(1) {
+                    top: 0;
+                    left: 0;
+                    @include smMax {
+                        width: sm_vw(244);
+                    }
+                }
+                &:nth-child(2) {
+                    top: 38px;
+                    left: 237px;
+                    @include smMax {
+                        top: sm_vw(40);
+                        left: sm_vw(254);
+                        width: sm_vw(243);
+                    }
+                }
+                &:nth-child(3) {
+                    top: 76px;
+                    left: 474px;
+                    @include smMax {
+                        top: sm_vw(80);
+                        left: sm_vw(507);
+                        width: sm_vw(243);
+                    }
+                }
+                &:nth-child(4) {
+                    top: 244px;
+                    left: 0;
+                    @include smMax {
+                        top: sm_vw(310);
+                        left: 0;
+                        width: sm_vw(244);
+                    }
+                }
+                &:nth-child(5) {
+                    top: 282px;
+                    left: 237px;
+                    @include smMax {
+                        top: sm_vw(350);
+                        left: sm_vw(254);
+                        width: sm_vw(243);
+                    }
+                }
+                &:nth-child(6) {
+                    top: 320px;
+                    left: 474px;
+                    @include smMax {
+                        top: sm_vw(390);
+                        left: sm_vw(507);
+                        width: sm_vw(243);
+                    }
+                }
+            }
+        }
+        &__btn {
+            margin-top: 30px;
+            width: 190px;
+            @include smMax {
+                position: relative;
+                left: 0;
+                margin: sm_vw(40) auto 0;
+                width: sm_vw(380);
+            }
+        }
+    }
+    .concept {
+        position: relative;
+        margin-top: 130px;
+        z-index: 3;
+        @include smMax {
+            margin-top: sm_vw(130);
+        }
+        &__ttl {
+            position: relative;
+            margin-bottom: 40px;
+            @include smMax {
+                margin-bottom: sm_vw(70);
+            }
+        }
+        &__box {
+            .logo {
+                position: relative;
+                margin: 0 auto;
+            }
+            .wrapper {
+                position: relative;
+                margin-top: 75px;
+                width: 100%;
+                height: 530px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                @include smMax {
+                    height: auto;
+                    margin-top: sm_vw(80);
+                    padding: sm_vw(510) 0 0 0;
+                }
+                .img {
+                    position: absolute;
+                    top: -45px;
+                    left: -100px;
+                    width: 730px;
+                    @include smMax {
+                        top: sm_vw(-45);
+                        left: sm_vw(-45);
+                        height: auto;
+                        width: sm_vw(705);
+                    }
+                }
+                .txtBox {
+                    position: relative;
+                    width: 350px;
+                    padding: 63px 0 0 25px;
+                    @include smMax {
+                        width: 100%;
+                        padding: sm_vw(140) 0 sm_vw(80);
+                    }
+                    &__inner {
+                        position: relative;
+                        z-index: 2;
+                    }
+                    &__txt {
+                        font-size: 1.3rem;
+                        line-height: 1.85;
+                        @include smMax {
+                            font-size: sm_vw(26);
+                        }
+                    }
+                    &__btn {
+                        margin-top: 25px;
+                        width: 190px;
+                        @include smMax {
+                            margin-top: sm_vw(40);
+                            width: sm_vw(350);
+                        }
+                    }
+                }
+                .en {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    @include smMax {
+                        left: sm_vw(-45);
+                    }
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: -100px;
+                    width: 515px;
+                    height: 100%;
+                    opacity: 0.6;
+                    -webkit-backdrop-filter: blur(30px);
+                    backdrop-filter: blur(30px);
+                    @include smMax {
+                        right: sm_vw(-45);
+                        width: sm_vw(640);
+                    }
+                }
+                &.reverse {
+                    justify-content: flex-start;
+                    .img {
+                        left: auto;
+                        right: -100px;
+                        @include smMax {
+                            right: sm_vw(-45);
+                            width: sm_vw(640);
+                        }
+                    }
+                    &::before {
+                        left: -100px;
+                        right: auto;
+                        @include smMax {
+                            left: sm_vw(-45);
+                            width: sm_vw(640);
+                        }
+                    }
+                }
+            }
+            &.ambassador {
+                .logo {
+                    width: 275px;
+                    @include smMax {
+                        width: sm_vw(500);
+                    }
+                }
+                .wrapper {
+                    &::before {
+                        background-color: #fef6f1;
+                    }
+                }
+                .en {
+                    width: 339px;
+                    @include smMax {
+                        width: sm_vw(571);
+                    }
+                }
+            }
+            &.miracosta {
+                .logo {
+                    width: 280px;
+                    @include smMax {
+                        width: sm_vw(490);
+                    }
+                }
+                .wrapper {
+                    &::before {
+                        background-color: #fffdf0;
+                    }
+                }
+                .en {
+                    width: 265px;
+                    @include smMax {
+                        width: sm_vw(441);
+                    }
+                }
+            }
+            &.rdw {
+                .logo {
+                    width: 355px;
+                    @include smMax {
+                        width: sm_vw(580);
+                    }
+                }
+                .wrapper {
+                    &::before {
+                        background-color: #e6f4e9;
+                    }
+                }
+                .en {
+                    width: 348px;
+                    @include smMax {
+                        width: sm_vw(600);
+                    }
+                }
+            }
+            .txt01 {
+                position: relative;
+                margin-top: 22px;
+                font-size: 15px;
+                font-weight: 400;
+                text-align: center;
+                @include smMax {
+                    margin-top: sm_vw(30);
+                    font-size: sm_vw(26);
+                }
+            }
+        }
+        .concept__box + .concept__box {
+            margin-top: 90px;
+            @include smMax {
+                margin-top: sm_vw(180);
+            }
+        }
+    }
+}

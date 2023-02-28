@@ -1,0 +1,196 @@
+@charset "utf-8";
+
+//==========================================================================
+//_ico.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.c-ico-arrow-01
+//-----------------------------------------------------------------
+.c-ico {
+    position: relative;
+    display: inline-block;
+    &.c-ico-arrow {
+        width: 34px;
+        height: 5px;
+        @include smMax {
+            width: sm_vw(78);
+            height: sm_vw(10);
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0.5px;
+            width: 0.5px;
+            height: 7px;
+            background-color: $colorPlain;
+            transform-origin: right bottom;
+            transform: rotate(-45deg);
+            @include smMax {
+                height: sm_vw(14);
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            right: 4px;
+            bottom: 0;
+            width: calc(100% - 4px);
+            height: 0.5px;
+            background-color: $colorPlain;
+            @include smMax {
+                right: 4px;
+            }
+        }
+        &.c-ico-arrow-prev {
+            &:before {
+                left: 0;
+                transform: rotate(45deg);
+            }
+            &::after {
+                left: 4px;
+                bottom: 0;
+                width: calc(100% - 4px);
+                @include smMax {
+                    left: 4px;
+                }
+            }
+        }
+        &.white {
+            &:before {
+                background-color: #fff;
+            }
+            &::after {
+                background-color: #fff;
+            }
+        }
+    }
+    &.c-ico-down {
+        width: 11px;
+        @include smMax {
+            width: sm_vw(22);
+        }
+        svg {
+            stroke: #000;
+        }
+        &.pink {
+            svg {
+                stroke: #CC9B8C;
+            }
+        }
+        &.orange {
+            svg {
+                stroke: #C9A57C;
+            }
+        }
+        &.blue {
+            svg {
+                stroke: #98BFBC;
+            }
+        }
+        &.brown {
+            svg {
+                stroke: $colorBrown;
+            }
+        }
+        &.brown02 {
+            svg {
+                stroke: $colorBrown02;
+            }
+        }
+        &.brown03 {
+            svg {
+                stroke: $colorBrown03;
+            }
+        }
+    }
+    &.c-ico-caution {
+        width: 23px;
+        svg {
+            fill: #fff;
+        }
+        &.brown {
+            svg {
+                fill: $colorBrown02;
+            }
+        }
+    }
+    &.c-ico-map {
+        width: 15px;
+        svg {
+            fill: #fff;
+        }
+        &.brown {
+            svg {
+                fill: $colorBrown02;
+            }
+        }
+    }
+    &.c-ico-fair02 {
+        width: 18px;
+    }
+    &.c-ico-web {
+        width: 18px;
+    }
+    &.c-ico-train {
+        width: 30px;
+    }
+    &.c-ico-bus {
+        width: 30px;
+    }
+    &.c-ico-car {
+        width: 30px;
+    }
+    &.c-ico-plus {
+        position: relative;
+        width: 15px;
+        height: 15px;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 50%;
+            right: 50%;
+            transform: translate(50%,50%);
+            width: 100%;
+            height: 0.5px;
+            background-color: #000;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 50%;
+            right: 50%;
+            transform: translate(50%,50%) rotate(90deg);
+            width: 100%;
+            height: 0.5px;
+            background-color: #000;
+        }
+    }
+    &.c-ico-minus {
+        position: relative;
+        width: 15px;
+        height: 15px;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 50%;
+            right: 50%;
+            transform: translate(50%,50%);
+            width: 100%;
+            height: 0.5px;
+            background-color: #000;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 50%;
+            right: 50%;
+            transform: translate(50%,50%) rotate(90deg);
+            width: 100%;
+            height: 0.5px;
+            background-color: #000;
+            display: none;
+        }
+    }
+}

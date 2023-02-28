@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+@import "foundation/_setting.scss";
+//==========================================================================
+//allergy.scss
+//==========================================================================
+.l-main {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 54.5px;
+        right: 50%;
+        transform: translateX(50%);
+        min-width: 1618px;
+        width: 100%;
+        height: calc(100% - 54.5px);
+        background: #F2EBE2 url("../images/common/bg02.webp") 50% -300px repeat-y;
+        background-size: 100% auto;
+        @include smMax {
+            min-width: 100%;
+            background: #F2EBE2 url("../images/common/bg02_sp.webp") 50% sm_vw(-960) repeat-y;
+            background-size: 100% auto;
+        }
+    }
+}
+
+.index {
+    &__box {
+        padding: 50px 0 60px;
+        @include smMax {
+            padding: sm_vw(100) 0 sm_vw(100);
+        }
+        &__inner {
+            @include smMax {
+                padding: 0;
+            }
+        }
+        .box-border {
+            border-top: 0.5px solid $colorBrown02;
+        }
+        &:last-child {
+            padding-bottom: 0;
+            .acBox {
+                padding-bottom: 50px;
+                border-bottom: 0.5px solid $colorBrown02;
+                @include smMax {
+                    padding-bottom: sm_vw(100);
+                }
+            }
+        }
+    }
+    .index__box + .index__box {
+        padding: 0 0 50px;
+        @include smMax {
+            padding: 0 0 sm_vw(100);
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+    &__map01 {
+        margin: 0 50px;
+        @include smMax {
+            margin: 0;
+        }
+    }
+    &__map02 {
+        margin: 16px 170px 0;
+        @include smMax {
+            margin: sm_vw(32) 0 0;
+        }
+    }
+    &__map03 {
+        margin: 20px 170px 0;
+        @include smMax {
+            margin: sm_vw(40) 0 0;
+        }
+    }
+    &__ttl02 {
+        margin-top: 50px;
+        @include smMax {
+            margin-top: sm_vw(100);
+        }
+    }
+    &__txt01 {
+        margin-top: 30px;
+        @include smMax {
+            margin-top: sm_vw(60);
+        }
+    }
+    &__txt02 {
+        margin-top: 10px;
+        @include smMax {
+            margin-top: sm_vw(20);
+        }
+    }
+    &__list01 {
+        margin-top: 26px;
+        @include smMax {
+            margin-top: sm_vw(52);
+        }
+        .ttl {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: $colorBrown;
+            + .txt {
+                margin-top: 14px;
+                @include smMax {
+                    margin-top: sm_vw(28);
+                }
+            }
+            .ico {
+                top: 6px;
+                @include smMax {
+                    top: sm_vw(12);
+                }
+
+            }
+        }
+        .txt {
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 1.85;
+            @include smMax {
+                font-size: sm_vw(26);
+            }
+            + .ttl {
+                margin-top: 28px;
+                @include smMax {
+                    margin-top: sm_vw(56);
+                }
+            }
+            .c-list-caution {
+                margin-top: 5px;
+                @include smMax {
+                    margin-top: sm_vw(10);
+                }
+            }
+        }
+    }
+
+    .btnAC {
+        position: relative;
+        padding-top: 14px;
+        cursor: pointer;
+        @include smMax {
+            padding-top: sm_vw(28);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            right: 10px;
+            bottom: 50%;
+            transform: translateY(50%);
+            width: 15px;
+            height: 0.5px;
+            background-color: $colorBrown02;
+            @include smMax {
+                right: sm_vw(20);
+                width: sm_vw(30);
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            right: 10px;
+            bottom: 50%;
+            transform: translateY(50%) rotate(90deg);
+            width: 15px;
+            height: 0.5px;
+            background-color: $colorBrown02;
+            @include smMax {
+                right: sm_vw(20);
+                width: sm_vw(30);
+            }
+        }
+        &.is-active {
+            &::after {
+                display: none;
+            }
+        }
+        @include smMax {
+            padding-top: sm_vw(20);
+        }
+    }
+    .acBox {
+        display: none;
+    }
+}

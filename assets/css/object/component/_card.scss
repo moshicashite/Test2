@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+//==========================================================================
+//_card.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.c-card-01
+//-----------------------------------------------------------------
+.c-card-01 {
+    padding: 35px 0 50px;
+    background-color: #BFA28C;
+    @include smMax {
+        padding: sm_vw(70) 0 sm_vw(90);
+    }
+    >.ttl {
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        @include smMax {
+            margin-bottom: sm_vw(40);
+            font-size: sm_vw(36);
+            line-height: 1.4;
+        }
+    }
+    >.inner {
+        display: flex;
+        @include smMin {
+            justify-content: center;
+        }
+        @include smMax {
+            flex-direction: column;
+            gap: sm_vw(50) 0;
+        }
+    }
+
+    .box {
+        margin: 0 20px;
+        @include smMax {
+            margin: 0 sm_vw(45);
+        }
+        .ttl {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.5;
+            text-align: center;
+            @include smMax {
+                font-size: sm_vw(32);
+            }
+        }
+        .txt {
+            margin-top: 4px;
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #fff;
+            line-height: 1.4;
+            text-align: center;
+            @include smMax {
+                font-size: sm_vw(22);
+            }
+        }
+        .tel {
+            margin-top: 6px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.4;
+            text-align: center;
+            @include smMax {
+                font-size: sm_vw(36);
+            }
+            a {
+                padding-bottom: 6px;
+                color: #fff;
+                border-bottom: 0.5px solid #fff;
+                @include smMax {
+                    padding-bottom: sm_vw(8);
+                }
+            }
+            > span {
+                padding-bottom: 6px;
+                color: #fff;
+                border-bottom: 0.5px solid #fff;
+                @include smMax {
+                    padding-bottom: sm_vw(8);
+                }
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------
+//.c-card-02
+//-----------------------------------------------------------------
+.c-card-02 {
+    padding: 30px 50px 30px;
+    background-color: #FFFBF4;
+    @include smMax {
+        padding: sm_vw(50) sm_vw(30) sm_vw(50);
+    }
+    &.center_pc {
+        @include smMin {
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+
+
+

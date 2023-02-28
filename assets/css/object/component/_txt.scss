@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+//==========================================================================
+//_txt.scss
+//==========================================================================
+.ls01 {
+    letter-spacing: 0.12em;
+}
+.ls02 {
+    letter-spacing: 0.06em;
+}
+
+//-----------------------------------------------------------------
+//.c-txt
+//-----------------------------------------------------------------
+.c-txt-01 {
+    font-size: 1.3rem;
+    line-height: 2;
+    @include smMax {
+        font-size: sm_vw(26);
+        line-height: 1.85;
+    }
+    &.large {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        @include smMax {
+            font-size: sm_vw(32);
+        }
+    }
+    &.white {
+        color: #fff;
+    }
+    &.brown {
+        color: $colorBrown;
+    }
+    &.brown02 {
+        color: $colorBrown02;
+    }
+    &.brown03 {
+        color: $colorBrown03;
+    }
+}
+.c-txt-02 {
+    font-size: 1.3rem;
+    line-height: 1.85;
+    @include smMax {
+        font-size: sm_vw(26);
+        line-height: 1.85;
+    }
+    &.fw400 {
+        font-weight: 400;
+    }
+    &.brown {
+        color: $colorBrown;
+    }
+    &.brown02 {
+        color: $colorBrown02;
+    }
+    &.brown03 {
+        color: $colorBrown03;
+    }
+    .brown {
+        color: $colorBrown;
+    }
+    .brown02 {
+        color: $colorBrown02;
+    }
+    .brown03 {
+        color: $colorBrown03;
+    }
+    sup {
+        position: relative;
+        display: inline-block;
+        top: -0.4em;
+        font-size: 1rem;
+        transform: scale(0.8);
+    }
+}
+
+.c-txt-03 {
+    font-size: 1rem;
+    line-height: 1.85;
+    @include smMax {
+        font-size: sm_vw(20);
+        line-height: 1.85;
+    }
+    &.fw400 {
+        font-weight: 400;
+    }
+    &.brown {
+        color: $colorBrown;
+    }
+    &.brown02 {
+        color: $colorBrown02;
+    }
+    &.brown03 {
+        color: $colorBrown03;
+    }
+    .brown {
+        color: $colorBrown;
+    }
+    .brown02 {
+        color: $colorBrown02;
+    }
+    .brown03 {
+        color: $colorBrown03;
+    }
+}
+
+
+.c-link-01 {
+    color: $colorBrown02;
+    text-decoration: underline;
+    @include hover {
+        text-decoration: none;
+    }
+}

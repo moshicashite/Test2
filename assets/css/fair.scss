@@ -1,0 +1,270 @@
+@charset "utf-8";
+
+@import "foundation/_setting.scss";
+//==========================================================================
+//news.scss
+//==========================================================================
+.l-main {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 54.5px;
+        right: 50%;
+        transform: translateX(50%);
+        min-width: 1618px;
+        width: 100%;
+        height: calc(100% - 54.5px);
+        background: #F2EBE2 url("../images/common/bg02.webp") 50% -300px no-repeat;
+        background-size: 100% auto;
+        @include smMax {
+            min-width: 100%;
+            background: #F2EBE2 url("../images/common/bg02_sp.webp") 50% sm_vw(-960) no-repeat;
+            background-size: 100% auto;
+        }
+    }
+}
+
+.index{
+    &__ttlBox {
+        margin: 50px 0 20px;
+        @include smMax {
+            margin: sm_vw(100) 0 sm_vw(40);
+        }
+        .ttl {
+            margin-top: 10px;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 1.45;
+            text-align: center;
+            @include smMax {
+                margin-top: sm_vw(20);
+                font-size: sm_vw(44);
+            }
+        }
+        .tags {
+            padding-top: 20px;
+            border-top: 0.5px solid $colorBrown03;
+            margin: 14px auto 0;
+            @include smMax {
+                padding-top: sm_vw(40);
+                margin: sm_vw(28) auto 0;
+            }
+        }
+    }
+
+    &__image01 {
+        margin: 20px 170px 0;
+        @include smMax {
+            margin: sm_vw(40) 0 0;
+        }
+    }
+
+    &__box {
+        &__inner01 {
+            &.row02 {
+                display: flex;
+                gap: 17.5px;
+                flex-wrap: wrap;
+                @include smMax {
+                    gap: sm_vw(17.5) 0;
+                    flex-wrap: wrap;
+                }
+                .box {
+                    width: calc(50% - 8.75px);
+                    &:nth-child(3) {
+                        width: 100%;
+                    }
+                    @include smMax {
+                        width: 100%;
+                        .index__ttl02 {
+                            &:first-child {
+                                margin-top: sm_vw(22.5);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__ttl01 {
+        text-align: center;
+        .tags {
+            margin-top: 10px;
+            @include smMax {
+                margin-top: sm_vw(20);
+            }
+            .c-tag {
+                width: 255px;
+                @include smMax {
+                    width: 100%;
+                }
+            }
+        }
+        .date {
+            margin-top: 1px;
+            line-height: 1;
+            @include smMax {
+                margin-top: sm_vw(2);
+            }
+            .txt {
+                font-size: 1.2rem;
+                font-weight: 400;
+                @include smMax {
+                    font-size: sm_vw(24);
+                }
+            }
+            .num {
+                font-size: 2rem;
+                font-weight: 400;
+                color: $colorBrown02;
+                @include smMax {
+                    font-size: sm_vw(40);
+                }
+            }
+        }
+    }
+    &__txt01 {
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 1.85;
+        @include smMax {
+            font-size: sm_vw(26);
+        }
+    }
+    &__btn {
+        width: 330px;
+        @include smMax {
+            width: 100%;
+        }
+        &.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &__media {
+        @include smMax {
+            margin: 0 sm_vw(-45);
+        }
+    }
+    .acBox02 {
+        display: none;
+    }
+
+    .index__ttl01 + .index__txt01 {
+        margin-top: 15px;
+        @include smMax {
+            margin-top: sm_vw(30);
+        }
+    }
+    .index__ttl01 + .index__box__inner01 {
+        margin-top: 25px;
+        @include smMax {
+            margin-top: sm_vw(50);
+        }
+    }
+    .index__ttl02 + .index__txt01 {
+        margin-top: 5px;
+        @include smMax {
+            margin-top: sm_vw(30);
+        }
+    }
+    .index__txt01 + .index__box__inner01 {
+        margin-top: 35px;
+        @include smMax {
+            margin-top: sm_vw(70);
+        }
+    }
+    .index__txt01 + .index__txt01 {
+        margin-top: 10px;
+        @include smMax {
+            margin-top: sm_vw(20);
+        }
+    }
+    .index__txt01 + .index__btn {
+        margin-top: 25px;
+        @include smMax {
+            margin-top: sm_vw(50);
+        }
+    }
+    .index__txt01 + .index__table01 {
+        margin-top: 30px;
+        @include smMax {
+            margin-top: sm_vw(60);
+        }
+    }
+    .index__box__inner01 + .index__box__inner01 {
+        margin-top: 35px;
+        @include smMax {
+            margin-top: sm_vw(70);
+        }
+    }
+    .index__box__inner01 + .index__txt01 {
+        margin-top: 15px;
+        @include smMax {
+            margin-top: sm_vw(30);
+        }
+    }
+    .acBox02 + .index__btn {
+        margin-top: 30px;
+        @include smMax {
+            margin-top: sm_vw(60);
+        }
+    }
+    .index__box__inner01 + .index__btn {
+        margin-top: 30px;
+        @include smMax {
+            margin-top: sm_vw(60);
+        }
+    }
+    .index__box__inner01 + .index__table01 {
+        margin-top: 35px;
+        @include smMax {
+            margin-top: sm_vw(70);
+        }
+    }
+    .index__box + .index__box {
+        margin-top: 60px;
+        @include smMax {
+            margin-top: sm_vw(120);
+        }
+    }
+    .index__btn + .index__txt01 {
+        margin-top: 25px;
+        @include smMax {
+            margin-top: sm_vw(50);
+        }
+    }
+    .index__btn + .index__table01 {
+        margin-top: 35px;
+    }
+    .index__table01 + .index__btn {
+        margin-top: 30px;
+        @include smMax {
+            margin-top: sm_vw(70);
+        }
+    }
+    .index__table01 + .index__caution01 {
+        margin-top: 10px;
+        @include smMax {
+            margin-top: sm_vw(20);
+        }
+    }
+    .index__image01 + .index__caution01 {
+        margin-top: 10px;
+        @include smMax {
+            margin-top: sm_vw(20);
+        }
+    }
+    .index__image01 + .index__ttl02 {
+        margin-top: 15px;
+        @include smMax {
+            margin-top: sm_vw(40);
+        }
+    }
+    .index__btn + .index__btn {
+        margin-top: 30px;
+        @include smMax {
+            margin-top: sm_vw(30);
+        }
+    }
+}

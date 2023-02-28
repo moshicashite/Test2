@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+//==========================================================================
+//_list.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.c-list
+//-----------------------------------------------------------------
+.c-list-01 {
+    > li {
+        padding-left: 1em;
+        text-indent: -1em;
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 1.8;
+    }
+}
+.c-list-disc {
+    > li {
+        position: relative;
+        padding-left: 1em;
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 1.8;
+        &::before {
+            content: "・";
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &.white {
+            color: #fff;
+        }
+        &.brown {
+            color: $colorBrown;
+        }
+        &.brown02 {
+            color: $colorBrown02;
+        }
+        &.brown03 {
+            color: $colorBrown03;
+        }
+        .brown {
+            color: $colorBrown;
+        }
+        .brown02 {
+            color: $colorBrown02;
+        }
+        .brown03 {
+            color: $colorBrown03;
+        }
+    }
+}
+.c-list-caution {
+    > li {
+        position: relative;
+        padding-left: 1em;
+        text-indent: -1em;
+        font-size: 1.0rem;
+        font-weight: 400;
+        line-height: 1.8;
+        &.brown {
+            color: $colorBrown;
+        }
+        &.brown02 {
+            color: $colorBrown02;
+        }
+        &.brown03 {
+            color: $colorBrown03;
+        }
+        .brown {
+            color: $colorBrown;
+        }
+        .brown02 {
+            color: $colorBrown02;
+        }
+        .brown03 {
+            color: $colorBrown03;
+        }
+    }
+}

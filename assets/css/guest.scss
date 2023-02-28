@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+@import "foundation/_setting.scss";
+//==========================================================================
+//guest.scss
+//==========================================================================
+.l-main {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 54.5px;
+        right: 50%;
+        transform: translateX(50%);
+        min-width: 1618px;
+        width: 100%;
+        height: calc(100% - 54.5px);
+        background: #F2EBE2 url("../images/common/bg02.webp") 50% -300px repeat-y;
+        background-size: 100% auto;
+        @include smMax {
+            min-width: 100%;
+            background: #F2EBE2 url("../images/common/bg02_sp.webp") 50% sm_vw(-960) repeat-y;
+            background-size: 100% auto;
+        }
+    }
+}
+
+.index {
+    &__box {
+        padding-top: 60px;
+        @include smMax {
+            padding-top: sm_vw(120);
+        }
+    }
+    &__txt01 {
+        margin-top: 16px;
+        @include smMax {
+            margin-top: sm_vw(32);
+        }
+    }
+    .index__txt01 + .index__txt01 {
+        margin-top: 22px;
+        @include smMax {
+            margin-top: sm_vw(44);
+        }
+    }
+    &__list01 {
+        margin-top: 26px;
+        @include smMax {
+            margin-top: sm_vw(52);
+        }
+        dt {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: $colorBrown;
+            @include smMax {
+                font-size: sm_vw(32);
+            }
+            + dd {
+                margin-top: 9px;
+                @include smMax {
+                    margin-top: sm_vw(18);
+                }
+            }
+        }
+        dd {
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 1.85;
+            @include smMax {
+                font-size: sm_vw(26);
+            }
+            + dt {
+                margin-top: 16px;
+                @include smMax {
+                    margin-top: sm_vw(32);
+                }
+            }
+            .c-list-caution {
+                margin-top: 5px;
+                @include smMax {
+                    margin-top: sm_vw(10);
+                }
+            }
+        }
+    }
+    &__card01 {
+        margin-top: 28px;
+        @include smMax {
+            margin-top: sm_vw(56);
+        }
+    }
+}

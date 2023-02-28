@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+//==========================================================================
+//_table.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.c-table-01
+//-----------------------------------------------------------------
+.c-table-01 {
+    width: 100%;
+    border: 1px solid #BFBFBF;
+    table-layout: fixed;
+    caption {
+        .caption {
+            margin-bottom: 11px;
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 1.85;
+            text-align: left;
+        }
+    }
+    th {
+        padding: 8px 9px 10px;
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 1.45;
+        text-align: left;
+        color: #fff;
+        background-color: $colorBrown;
+        border: 1px solid #BFBFBF;
+    }
+    td {
+        padding: 8px 9px 10px;
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 1.45;
+        text-align: left;
+        background-color: #fff;
+        border: 1px solid #BFBFBF;
+        &.middle {
+            vertical-align: middle;
+        }
+    }
+}
