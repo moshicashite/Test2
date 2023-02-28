@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+//==========================================================================
+//_btn.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.c-btn-01
+//-----------------------------------------------------------------
+.c-btn-01 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 30px;
+    height: 40px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: $colorPlain;
+    border-radius: 100vh;
+    @include smMax {
+        font-size: sm_vw(24);
+        padding: 0 sm_vw(50);
+        height: sm_vw(100);
+    }
+    &.narrow {
+        padding: 0 25px;
+        @include smMax {
+            padding: 0 sm_vw(40);
+        }
+    }
+    &.large {
+        height: 50px;
+        font-size: 1.2rem;
+        @include smMax {
+            font-size: sm_vw(24);
+            height: sm_vw(100);
+        }
+    }
+    &.large02 {
+        height: 60px;
+        font-size: 1.2rem;
+        @include smMax {
+            font-size: sm_vw(24);
+            height: sm_vw(100);
+        }
+    }
+    &.large03 {
+        height: 84px;
+        font-size: 1.2rem;
+        line-height: 1.4;
+        @include smMax {
+            font-size: sm_vw(24);
+            height: sm_vw(168);
+        }
+    }
+    &.small {
+        padding: 0 15px;
+        font-size: 1rem;
+        @include smMax {
+            font-size: sm_vw(20);
+            padding: 0 sm_vw(30);
+            height: sm_vw(70);
+        }
+        .c-ico {
+            margin-left: 8px;
+        }
+    }
+    &.white {
+        background-color: #fff;
+    }
+    &.plain {
+        background-color: #FFFBF4;
+    }
+    &.pink {
+        background-color: #EDD3CC;
+    }
+    &.orange {
+        background-color: #F8E7CD;
+    }
+    &.blue {
+        background-color: #D5E5E3;
+    }
+    &.brown {
+        background-color: $colorBrown;
+    }
+    &.brown02 {
+        background-color: $colorBrown02;
+    }
+    &.beige {
+        background-color: #FFFBF4;
+    }
+    .c-ico {
+        position: relative;
+        margin-left: 16px;
+        top: -0.2em;
+        &.c-ico-arrow {
+            @include transition;
+        }
+    }
+    .txt {
+        position: relative;
+        display: block;
+        &.flex1 {
+            flex: 1;
+        }
+        &.en01 {
+            font-family: $font-en;
+        }
+        &.white {
+            color: #fff;
+        }
+        &.small {
+            font-size: 1rem;
+        }
+        .close {
+            position: absolute;
+            left: 0;
+            opacity: 0;
+        }
+    }
+    @include hover {
+        opacity: 0.7;
+        .c-ico {
+            &.c-ico-arrow {
+                transform: translateX(10px);
+            }
+        }
+    }
+
+    &.is-active {
+        .txt {
+            .open {
+                opacity: 0;
+            }
+            .close {
+                opacity: 1;
+            }
+        }
+        .c-ico.c-ico-plus::after {
+            display: none;
+        }
+    }
+}
+
+
+
+
+
+
+

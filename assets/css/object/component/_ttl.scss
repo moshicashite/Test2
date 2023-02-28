@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+//==========================================================================
+//_ttl.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.c-ttl-01
+//-----------------------------------------------------------------
+.c-ttl-01 {
+    font-size: 5.5rem;
+    font-weight: 400;
+    font-family: $font-en;
+    line-height: 1.0;
+    &.center {
+        text-align: center;
+    }
+    &.center_sp {
+        @include smMax {
+            text-align: center;
+        }
+    }
+    &.white {
+        color: #fff;
+    }
+    &.brown {
+        color: $colorBrown;
+    }
+    .border-r_pc {
+        @include smMin {
+            position: relative;
+            display: inline-block;
+            padding-right: 50px;
+            &::before {
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: 50%;
+                transform: translateY(50%);
+                width: 35px;
+                height: 0.5px;
+            }
+            &.brown {
+                &::before {
+                    background-color: $colorBrown;
+                }
+            }
+        }
+    }
+    .border-b {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 50px;
+        @include smMax {
+            padding-bottom: sm_vw(90);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            right: 50%;
+            bottom: 0;
+            transform: translateX(50%);
+            width: 0.5px;
+            height: 35px;
+            @include smMax {
+                height: sm_vw(70);
+            }
+        }
+        &.brown {
+            &::before {
+                background-color: $colorBrown;
+            }
+        }
+    }
+    .border-b_sp {
+        @include smMax {
+            position: relative;
+            display: inline-block;
+            padding-bottom: sm_vw(90);
+            &::before {
+                content: "";
+                position: absolute;
+                right: 50%;
+                bottom: 0;
+                transform: translateX(50%);
+                width: 0.5px;
+                height: sm_vw(70);
+            }
+            &.brown {
+                &::before {
+                    background-color: $colorBrown;
+                }
+            }
+        }
+    }
+    @include smMax {
+        font-size: sm_vw(80);
+    }
+}
+.c-ttl-02 {
+    font-size: 2.7rem;
+    font-weight: 400;
+    font-family: $font-en;
+    @include smMax {
+        font-size: sm_vw(54);
+    }
+    &.white {
+        color: #fff;
+    }
+    &.center {
+        text-align: center;
+    }
+    &.border {
+        position: relative;
+        padding-bottom: 24px;
+        @include smMax {
+            padding-bottom: sm_vw(40);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 0.5px;
+            height: 25px;
+            background-color: #fff;
+            @include smMax {
+                height: sm_vw(50);
+            }
+        }
+    }
+}
+.c-ttl-03 {
+    font-size: 2.7rem;
+    font-weight: 400;
+    font-family: $font-serif;
+    line-height: 1.55;
+    @include smMax {
+        font-size: sm_vw(48);
+    }
+}
+
+//-----------------------------------------------------------------
+//.c-ttl-04
+//-----------------------------------------------------------------
+.c-ttl-04 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    @include smMax {
+        font-size: sm_vw(44);
+    }
+    &.small {
+        font-size: 1.8rem;
+        @include smMax {
+            font-size: sm_vw(36);
+        }
+    }
+    &.small02 {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        @include smMax {
+            font-size: sm_vw(32);
+            line-height: 1.3;
+            letter-spacing: -1px;
+            span {
+                letter-spacing: -1px;
+            }
+        }
+    }
+    &.small03 {
+        font-size: 2rem;
+        line-height: 1.5;
+        @include smMax {
+            font-size: sm_vw(40);
+        }
+    }
+    &.border {
+        padding-bottom: 14px;
+        border-bottom: 0.5px solid;
+        @include smMax {
+            padding-bottom: sm_vw(28);
+        }
+    }
+    &.left {
+        text-align: left;
+    }
+    &.brown {
+        border-color: $colorBrown;
+    }
+    &.brown02 {
+        border-color: $colorBrown02;
+    }
+    &.brown03 {
+        border-color: $colorBrown03;
+    }
+
+    .white {
+        color: #fff;
+    }
+    .brown {
+        color: $colorBrown;
+    }
+    .brown02 {
+        color: $colorBrown02;
+    }
+    .brown03 {
+        color: $colorBrown03;
+    }
+    .small01 {
+        margin-bottom: 3px;
+        display: block;
+        font-size: 1.6rem;
+        @include smMax {
+            margin-bottom: sm_vw(6);
+            font-size: sm_vw(32);
+        }
+    }
+}

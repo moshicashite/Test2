@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+//==========================================================================
+//_tag.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.c-tag
+//-----------------------------------------------------------------
+.c-tags {
+    display: block;
+    .c-tag {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 22px;
+        font-size: 1.2rem;
+        font-weight: 400;
+        border-radius: 100vh;
+        @include smMax {
+            font-size: sm_vw(24);
+            height: sm_vw(44);
+        }
+        &.red {
+            background-color: #EDD3CC;
+        }
+        &.blue {
+            background-color: #D5E5E3;
+        }
+        &.orange {
+            background-color: #F0D7B4;
+        }
+        &.gray {
+            background-color: #C1C1C1;
+        }
+        &.brown {
+            background-color: $colorBrown;
+        }
+        &.brown02 {
+            background-color: $colorBrown02;
+        }
+        + .c-tag {
+            margin-top: 5px;
+            @include smMax {
+                margin-top: sm_vw(10);
+            }
+        }
+        .small {
+            letter-spacing: -1px;
+            @include smMin {
+                display: block;
+                width: 100%;
+                flex: 1;
+            }
+            &.white {
+                color: #fff;
+            }
+        }
+    }
+    &.row {
+        display: flex;
+        gap: 0 10px;
+        @include smMax {
+            gap: sm_vw(10) 0;
+            flex-direction: column;
+        }
+        .c-tag {
+            + .c-tag {
+                margin-top: 0;
+                @include smMax {
+                    margin-top: 0;
+                }
+            }
+        }
+        &.center {
+            justify-content: center;
+        }
+        &.center_pc {
+            @include smMin {
+                justify-content: center;
+            }
+        }
+    }
+    &.flex-wrap {
+        flex-wrap: wrap;
+        @include smMax {
+            flex-direction: row;
+            gap: sm_vw(10);
+        }
+        .c-tag {
+            width: auto;
+            padding: 0 10px;
+        }
+    }
+}
+
+
+//-----------------------------------------------------------------
+//.c-cat 
+//-----------------------------------------------------------------
+.c-cat {
+    display: flex;
+    align-items: center;
+    padding: 1px 9px 0 9px;
+    height: 22.5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: $font-en;
+    @include smMax {
+        padding: sm_vw(2) sm_vw(16) 0 sm_vw(16);
+        font-size: sm_vw(24);
+        height: sm_vw(45);
+    }
+    &.topics {
+        color: #fff;
+        background-color: #BFA28C;
+    }
+    &.event {
+        color: #BFA28C;
+        background-color: #fff;
+    }
+}
+

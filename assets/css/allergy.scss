@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+@import "foundation/_setting.scss";
+//==========================================================================
+//allergy.scss
+//==========================================================================
+.l-main {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 54.5px;
+        right: 50%;
+        transform: translateX(50%);
+        min-width: 1618px;
+        width: 100%;
+        height: calc(100% - 54.5px);
+        background: #F2EBE2 url("../images/common/bg02.webp") 50% -300px repeat-y;
+        background-size: 100% auto;
+        @include smMax {
+            min-width: 100%;
+            background: #F2EBE2 url("../images/common/bg02_sp.webp") 50% sm_vw(-960) repeat-y;
+            background-size: 100% auto;
+        }
+    }
+}
+
+.index {
+    &__box {
+        padding-top: 30px;
+        @include smMax {
+            padding-top: sm_vw(60);
+        }
+    }
+    .index__box + .index__box {
+        margin-top: 30px;
+        @include smMax {
+            padding-top: 0;
+            margin-top: sm_vw(100);
+        }
+    }
+    &__txt01 {
+        margin-top: 16px;
+        @include smMax {
+            margin-top: sm_vw(32);
+        }
+    }
+    &__txt02 {
+        margin-top: 26px;
+        @include smMax {
+            margin-top: sm_vw(32);
+        }
+    }
+    &__table01 {
+        margin-top: 26px;
+        @include smMax {
+            margin-top: sm_vw(52);
+        }
+    }
+    .index__txt01 + .index__txt01 {
+        margin-top: 22px;
+        @include smMax {
+            margin-top: sm_vw(44);
+        }
+    }
+}

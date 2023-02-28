@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+//==========================================================================
+//_media.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.c-media-01
+//-----------------------------------------------------------------
+.c-media-01 {
+    padding: 40px 50px;
+    background-color: #FFFBF4;
+    border-top: 0.5px solid $colorBrown03;
+    border-bottom: 0.5px solid $colorBrown03;
+    @include smMax {
+        padding: sm_vw(80) sm_vw(45);
+    }
+    .txt01 {
+        margin-top: 8px;
+        @include smMax {
+            margin-top: sm_vw(16);
+        }
+    }
+    .tag01 {
+        margin-top: 16px;
+        @include smMax {
+            margin-top: sm_vw(32);
+        }
+    }
+    .tag02 {
+        margin-top: 10px;
+        @include smMax {
+            margin-top: sm_vw(20);
+        }
+        .tag {
+            width: 255px;
+            @include smMax {
+                width: 100%;
+            }
+        }
+    }
+    .image01 {
+        margin-top: 20px;
+        @include smMax {
+            margin-top: sm_vw(40);
+        }
+    }
+    .txt02 {
+        margin-top: 16px;
+        @include smMax {
+            margin-top: sm_vw(32);
+        }
+    }
+    .txt03 {
+        margin-top: 8px;
+        @include smMax {
+            margin-top: sm_vw(16);
+            letter-spacing: 0;
+        }
+    }
+}
+
+
+
+
+

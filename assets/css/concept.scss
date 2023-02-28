@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+@import "foundation/_setting.scss";
+//==========================================================================
+//gallery.scss
+//==========================================================================
+.l-nav__menu li.btnConcept > a .txt {
+    @include smMin {
+        opacity: 0.4;
+    }
+}
+.l-main {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #F2EBE2;
+    }
+}
+
+.index {
+    &__box {
+        padding: 60px 0 0;
+        @include smMax {
+            padding: sm_vw(94) 0 0;
+        }
+        &__inner {
+            padding: 0;
+        }
+        &__wrapper {
+            position: relative;
+            padding-bottom: 50px;
+            @include smMax {
+                padding-bottom: sm_vw(80);
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                width: 100vw;
+                height: 100%;
+                opacity: 0.6;
+                -webkit-backdrop-filter: blur(30px);
+                backdrop-filter: blur(30px);
+                @include smMax {
+                    right: sm_vw(-45);
+                    width: sm_vw(640);
+                }
+            }
+        }
+        &__outer {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-top: 40px;
+            @include smMax {
+                padding-top: sm_vw(80);
+                display: block;
+            }
+            .txtBox {
+                flex: 1;
+                .txt {
+                    margin-top: 20px;
+                    @include smMax {
+                        margin-top: sm_vw(20);
+                    }
+                }
+            }
+            &.layout01 {
+                .imageBox {
+                    width: 450px;
+                    @include smMax {
+                        margin: sm_vw(44) 0 0 sm_vw(155);
+                        width: sm_vw(550);
+                    }
+                }
+                .txtBox {
+                    margin: 0 50px 0 0;
+                    @include smMax {
+                        margin: 0;
+                    }
+                }
+                &.reverse {
+                    flex-direction: row-reverse;
+                    .imageBox {
+                        width: 550px;
+                        @include smMax {
+                            margin: sm_vw(44) 0 0 sm_vw(-45);
+                            width: sm_vw(705);
+                        }
+                    }
+                    .txtBox {
+                        margin: 0 0 0 50px;
+                        @include smMax {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            &.layout02 {
+                .imageBox {
+                    width: 550px;
+                    @include smMax {
+                        margin: sm_vw(44) 0 0 0;
+                        width: sm_vw(705);
+                    }
+                }
+                .txtBox {
+                    margin: 0 50px 0 0;
+                    @include smMax {
+                        margin: 0;
+                    }
+                }
+                &.reverse {
+                    flex-direction: row-reverse;
+                    .imageBox {
+                        width: 550px;
+                        @include smMax {
+                            margin: sm_vw(44) 0 0 sm_vw(-45);
+                            width: sm_vw(705);
+                        }
+                    }
+                    .txtBox {
+                        margin: 0 0 0 50px;
+                        @include smMax {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .index__box + .index__box {
+        margin-top: 40px;
+        @include smMax {
+            margin-top: 0;
+        }
+    }
+    &__logo01 {
+        margin: 0 auto;
+        &.logo-ambassador {
+            width: 250px;
+            @include smMax {
+                width: sm_vw(500);
+            }
+        }
+        &.logo-miracosta {
+            width: 245px;
+            @include smMax {
+                width: sm_vw(490);
+            }
+        }
+        &.logo-rdw {
+            width: 290px;
+            @include smMax {
+                width: sm_vw(580);
+            }
+        }
+    }
+    &__txt01 {
+        margin: 14px 0 22px;
+        font-size: 1.3rem;
+        line-height: 1.85;
+        text-align: center;
+        @include smMax {
+            padding: 0 sm_vw(45);
+            font-size: sm_vw(26);
+            text-align: center;
+        }
+    }
+    &__kv {
+        position: relative;
+    }
+    &__btn {
+        margin: 30px auto 0;
+        width: 330px;
+        @include smMax {
+            margin: sm_vw(60) auto 0;
+            width: sm_vw(660);
+        }
+    }
+    #ambassador {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            right: 50%;
+            transform: translateX(50%);
+            @include smMin {
+                top: -30px;
+                width: 1500px;
+                height: 100%;
+                background: transparent url("../images/common/bg_concept01.webp") 50% 0 no-repeat;
+                background-size: 100% auto;
+            }
+            @include smMax {
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: transparent url("../images/common/bg_concept01_sp.webp") 50% 0 no-repeat;
+                background-size: 100% auto;
+            }
+        }
+        .index__box__wrapper {
+            position: relative;
+            z-index: 10;
+            &::before {
+                left: 140px;
+                background-color: #fef6f1;
+                @include smMax {
+                    left: sm_vw(110);
+                }
+            }
+        }
+        .index__btn {
+            position: relative;
+            z-index: 10;
+        }
+    }
+    #miracosta {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            right: 50%;
+            transform: translateX(50%);
+            @include smMin {
+                top: -120px;
+                width: 1500px;
+                height: 100%;
+                background: transparent url("../images/common/bg_concept02.webp") 50% 0 no-repeat;
+                background-size: 100% auto;
+            }
+            @include smMax {
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: transparent url("../images/common/bg_concept02_sp.webp") 50% 0 no-repeat;
+                background-size: 100% auto;
+            }
+        }
+        .index__box__wrapper {
+            position: relative;
+            z-index: 10;
+            &::before {
+                right: 140px;
+                background-color: #fffdf0;
+                @include smMax {
+                    right: sm_vw(110);
+                }
+            }
+        }
+        .index__btn {
+            position: relative;
+            z-index: 10;
+        }
+    }
+    #rdw {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            right: 50%;
+            transform: translateX(50%);
+            @include smMin {
+                top: -530px;
+                width: 1500px;
+                height: 100%;
+                min-height: 3000px;
+                background: transparent url("../images/common/bg_concept03.webp") 50% 0 no-repeat;
+                background-size: 100% auto;
+            }
+            @include smMax {
+                top: sm_vw(-300);
+                width: 100%;
+                height: 100%;
+                background: transparent url("../images/common/bg_concept03_sp.webp") 50% 0 no-repeat;
+                background-size: 100% auto;
+            }
+        }
+        .index__box__wrapper {
+            position: relative;
+            z-index: 10;
+            &::before {
+                left: 140px;
+                background-color: #DAF7F3;
+                @include smMax {
+                    left: sm_vw(110);
+                }
+            }
+        }
+        .index__btn {
+            position: relative;
+            z-index: 10;
+        }
+    }
+}
